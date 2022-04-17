@@ -14,26 +14,26 @@ router.get("/", async (request, response) => {
     let limitMaxPrice = maxPrice + limit;
 
     if (maxPrice) {
-      const resultForMaxPrice = await knex("meal").where("price", "=", maxPrice);
+      const resultForMaxPrice = await knex("meal").where("price", "=<",maxPrice);
       response.json(resultForMaxPrice);
 
     } else if (availableReservations) {
 
     } else if (title) {
-      const resultForTitle = await knex("meal").whereLike('title', '%');
+      const resultForTitle = await knex("meal").whereLike("title","%");
       response.json(resultForTitle);
 
     } else if (createdAfter) {
-      const resultForCreatedAfter = await knex("meal").where("created_date", "<", createdAfter);
+      const resultForCreatedAfter = await knex("meal").where("created_date","<",createdAfter);
       response.json(resultForCreatedAfter);
 
     } else if (limit) {
-      const resultlLimit = await knex("meal").where("id", limit);
+      const resultlLimit = await knex("meal").where("max_reservations","=",limit);
       response.json(resultlLimit);
 
     } else if (limitMaxPrice) {
       const rMaxPrice = await knex("meal").where("price", ">", maxPrice);
-      const rLimit = await knex("meal").where("id", "=", limit);
+      const rLimit = await knex("meal").where("max_reservations", "=", limit);
       const resultLimitMaxPrice = rMaxPrice + rLimit;
       response.json(resultLimitMaxPrice);
     } else {
