@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Style.css"
+import Logo from "../assets/images/logo.svg"
 
 export function Header(){
     return(<div>
         <header>
-        <h1 class="text1"> Cooking Pot</h1>
+            <div><img src={Logo}/> Cooking Pot</div>
     </header>
 
     <nav>

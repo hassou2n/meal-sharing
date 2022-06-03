@@ -8,10 +8,19 @@ header{
     margin-bottom: 5px;
 }
 
-.text1{
-    font-size: 30px;
-    text-transform: uppercase;
-    padding-left: 10%; 
+header div{
+  display: flex;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-left: 10%; 
+  align-items: center;
+  margin: 15px;
+}
+
+header img{
+  height: 36px;
+  width: 36px; 
+  margin-right: 5px;
 }
 
 nav{
