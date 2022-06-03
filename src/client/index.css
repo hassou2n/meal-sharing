@@ -5,15 +5,15 @@
   box-sizing: border-box;
 }
 
-#root {
+/* #root {
   padding-left: 30%;
   padding-right: 30%;
   height: 100vh;
-}
+} */
 
 body {
   margin: 0;
-  font-size: 17px;
+  background-color: white;
 }
 
 ul {
