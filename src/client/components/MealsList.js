@@ -8,7 +8,7 @@ export default function MealsList() {
   const { isLoading, meals } = React.useContext(mealsContext);
 
   const mealsToRender = isLoading
-    ? 'not yet'
+    ? 'No meals'
     : meals.map((aMeal) => {
         return (
         <li className='recipeMealsContainer' key={aMeal.idMeals}>
