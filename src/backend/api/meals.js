@@ -45,30 +45,64 @@ router.get("/", async (request, response) => {
   }
 });
 
+// router.post("/", async (request, response) => {
+//   const rMeal = request.body;
+//   const addsaNewMeal = await knex("meal").insert(rMeal)
+//   response.json(addsaNewMeal)
+// });
+
 router.post("/", async (request, response) => {
-  const rMeal = request.body;
-  const addsaNewMeal = await knex("meal").insert(rMeal)
-  response.json(addsaNewMeal)
+  try {
+    if (
+      !request.body.title ||
+      !request.body.delivering_time ||
+      !request.body.max_reservations ||
+      !request.body.price ||
+      !request.body.created_date
+    ) {
+      response.status(400);
+      return;
+    }
+    const rMeal = await knex("meal").insert(request.body);
+    response.json(rMeal);
+  } catch (error) {
+    throw error;
+  }
 });
 
-router.get("/:id", async (request, response) => {
-  const id = request.params.id
-  const returnsMealById = await knex("meal").where({ id: id });
-  response.json(returnsMealById);
+
+
+router.get("/:mealId", async (request, response) => {
+  const mealId = request.params.mealId
+  try {
+  const returnsMealById = await knex("meal").where({ id: mealId }).select("title", "id");
+  response.json(returnsMealById[0]);;
+} catch (error) {
+  throw error;
+}
 });
 
-router.put("/:id", async (request, response) => {
-  const id = request.params.id
+
+router.put("/:mealId", async (request, response) => {
+  const mealId = request.params.mealId
   const rId = request.body
-  const updatesTheMealById = await knex("meal").where({ id: id }).update(rId);
+  try {
+  const updatesTheMealById = await knex("meal").where({ id: mealId }).update(rId);
   response.json(updatesTheMealById);
+} catch (error) {
+  throw error;
+}
 });
 
-router.delete("/:id", async (request, response) => {
-  const id = request.params.id
+router.delete("/:mealId", async (request, response) => {
+  const mealId = request.params.mealId
   const rId = request.body
-  const deletesTheMealById = await knex("meal").where({ id: id }).del(rId);
+  try {
+  const deletesTheMealById = await knex("meal").where({ id: mealId }).del(rId);
   response.json(deletesTheMealById);
+} catch (error) {
+  throw error;
+}
 });
 
 

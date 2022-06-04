@@ -6,14 +6,16 @@ import Logo from "../assets/images/logo.svg"
 export function Header(){
     return(<div>
         <header>
-            <div><img src={Logo}/> Cooking Pot</div>
+            <Link> <div><img src={Logo}/> Cooking Pot</div></Link>
     </header>
 
     <nav>
-        <ul>
+        <ul className="headerUl">
             <Link to={"/"}><li>Home</li></Link>
-            <Link to={"/"}><li>About</li></Link>
-            <Link><li>Contact</li></Link>
+            <Link to={"/meals"}><li>Meals</li></Link>
+            <Link to={"/addMeal"}><li>Add Meal</li></Link>
+            <Link to={"/about"}><li>About</li></Link>
+            <Link to={"/contact"}><li>Contact</li></Link>
         </ul>
     </nav>
     </div>)

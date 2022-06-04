@@ -4,16 +4,17 @@ import mealsContext from './MealsContext';
 import { useMeals } from './UseMeals';
 import './Style.css'
 
-function MealsList() {
+export default function MealsList() {
   const { isLoading, meals } = React.useContext(mealsContext);
 
   const mealsToRender = isLoading
     ? 'not yet'
     : meals.map((aMeal) => {
         return (
-        <li className='recipeMealsContainer' key={aMeal.idmeals}><Link to={`/meal/${aMeal.idmeals}`}>{aMeal.title}</Link>
+        <li className='recipeMealsContainer' key={aMeal.idMeals}>
+        <Link to={`/meal/${aMeal.idMeals}`}>{aMeal.title}</Link>
         <span>{aMeal.description}</span>
-        <span>{aMeal.price}</span>
+        <span>{aMeal.price} DKK </span>
         </li>
         )
       });
@@ -25,4 +26,3 @@ function MealsList() {
   );
 }
 
-export default MealsList;

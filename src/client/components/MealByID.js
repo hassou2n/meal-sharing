@@ -10,5 +10,5 @@ export function MealById() {
     return <div>Loading</div>;
   }
 
-  return <div>meal id: {meal.title}</div>;
+  return <div key={meal}>{`Meal ${meal.id} ${meal.title}`}</div>;
 }
