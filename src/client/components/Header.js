@@ -4,10 +4,10 @@ import "./Style.css"
 import Logo from "../assets/images/logo.svg"
 
 export function Header(){
-    return(
+    return(<div>
         <header>
             <Link> <div><img src={Logo}/> Cooking Pot</div></Link>
-
+            </header>
     <nav>
         <ul className="headerUl">
             <Link to={"/"}><li>Home</li></Link>
@@ -17,6 +17,6 @@ export function Header(){
             <Link to={"/contact"}><li>Contact</li></Link>
         </ul>
     </nav>
-    </header>)
+    </div>)
    
 }
