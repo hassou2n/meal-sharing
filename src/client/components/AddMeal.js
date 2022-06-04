@@ -42,7 +42,7 @@ export function AddMeal() {
           created_date: date,
         };
         try {
-          setIsDone(true);
+          setMealDone(true);
           const response = await fetch("/api/meals", {
             method: "POST",
             headers: { "Content-Type": "Application/json" },
