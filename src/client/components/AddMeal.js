@@ -21,12 +21,12 @@ export function AddMeal() {
         today.getDate();
         
 
-  const handleAddMealButton = async (e) => {
+  const handleAddMealButton = async  (e) => {
       if (
         title !== "" &&
         description !== "" &&
         location !== "" &&
-        when !== "" &&
+        deliveringTime !== "" &&
         description !== "" &&
         maxReservations !== "" &&
         price !== ""
@@ -118,10 +118,11 @@ export function AddMeal() {
                 type="number"
                 placeholder="Price"
                 name="price"
+                min="1"
                 onChange={(e) => setPrice(e.target.value)}
               ></input>
 
-              {!mealDone ? <div className="ButtonDiv"><button>Add Meal</button></div> : null}
+              {!mealDone ? <button>Add Meal</button>: null}
             </form>
       </div>
     </div>

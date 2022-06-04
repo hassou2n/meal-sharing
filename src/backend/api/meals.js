@@ -45,11 +45,6 @@ router.get("/", async (request, response) => {
   }
 });
 
-// router.post("/", async (request, response) => {
-//   const rMeal = request.body;
-//   const addsaNewMeal = await knex("meal").insert(rMeal)
-//   response.json(addsaNewMeal)
-// });
 
 router.post("/", async (request, response) => {
   try {
@@ -60,7 +55,7 @@ router.post("/", async (request, response) => {
       !request.body.price ||
       !request.body.created_date
     ) {
-      response.status(400);
+      response.status(400).json({error});
       return;
     }
     const rMeal = await knex("meal").insert(request.body);
