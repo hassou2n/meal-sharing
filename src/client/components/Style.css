@@ -1,0 +1,138 @@
+/*headerStart*/
+header{
+    height: auto;
+    width: auto;
+    background-color: #ececec;  
+    padding-top: 1px; 
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+}
+
+header div{
+  display: flex;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-left: 10%; 
+  align-items: center;
+  margin: 15px;
+}
+
+header img{
+  height: 36px;
+  width: 36px; 
+  margin-right: 5px;
+} 
+
+nav{
+    padding-top: 5px;
+    height: 25px;
+    position: relative;
+}
+
+nav ul{
+    position: absolute;
+    display: flex;
+    padding-left: 10%;
+    flex-flow: row wrap;
+}
+nav ul li {
+    display: inline;
+    padding: 10px; 
+}
+
+nav ul li:hover {
+    background-color:#ff4f5a;
+}
+/*headerEnd*/
+
+/*homeStart*/
+.HomeDiv{
+    margin: 5px;
+    padding-top: 30px;
+    padding-bottom: 400px;
+    text-align: center;
+}
+/*homeStart*/
+
+/*MealsListStart*/
+.containerMeals {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 325px;
+}
+
+.searchComponent{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.recipeMealsList{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+
+.recipeMealsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.recipeMealsContainer span {
+   font-size: 10px;
+   font-weight: bold;
+   margin: 5px 0;
+}
+/*MealsListEnd*/
+
+/*AddMealStart*/
+ 
+.AddMealDiv{
+margin: 31px;
+}
+
+.AddMealDiv div{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+input {
+    display: flex;
+    flex-direction: row;
+    background-color: #ececec;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+    margin-bottom: 3%;
+    font-size: 15px;
+}
+
+.ButtonDiv {
+    text-align: center;
+}
+
+button{
+    background-color: #ff4f5a;
+    border-radius: 5px;
+    border-width: 0px;
+    color: white;
+    padding: 5px;
+    font-size: 17px;
+    padding-bottom: 3%;
+    align-items: center;
+}
+
+/*AddMealEnd*/
