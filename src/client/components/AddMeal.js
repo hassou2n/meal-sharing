@@ -116,7 +116,7 @@ export function AddMeal() {
             onChange={(e) => setPrice(e.target.value)}
           ></input>
 
-          {!mealDone ? <button>Add Meal</button> : null}
+         <div> {!mealDone ? <button>Add Meal</button> : null}</div>
         </form>
       </div>
     </div>

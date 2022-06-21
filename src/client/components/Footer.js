@@ -7,35 +7,49 @@ export default function Footer() {
       <footer>
         <div className="container">
           <div className="row">
-            <div className="col-sm-6 col-md-3 item">
-              <h5>Services</h5>
+          <div className="col-sm-6 col-md-3 item">
+              <h5>Cooking Pot</h5>
               <ul>
                 <li>
-                  <a href="#">Web design</a>
+                  <a href="#">Cooking Pot.</a>
                 </li>
                 <li>
-                  <a href="#">Development</a>
+                  <a href="#">Cooking Pot.</a>
                 </li>
                 <li>
-                  <a href="#">Hosting</a>
+                  <a href="#">Cooking Pot.</a>
                 </li>
               </ul>
             </div>
             <div className="col-sm-6 col-md-3 item">
-              <h5>About</h5>
+              <h5>Cooking Pot</h5>
               <ul>
                 <li>
-                  <a href="#">Company</a>
+                  <a href="#">Cooking Pot.</a>
                 </li>
                 <li>
-                  <a href="#">Team</a>
+                  <a href="#">Cooking Pot.</a>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <a href="#">Cooking Pot.</a>
                 </li>
               </ul>
             </div>
-            <div className="col-md-6 item text">
+            <div className="col-sm-6 col-md-3 item">
+              <h5>Cooking Pot</h5>
+              <ul>
+                <li>
+                  <a href="#">Cooking Pot.</a>
+                </li>
+                <li>
+                  <a href="#">Cooking Pot.</a>
+                </li>
+                <li>
+                  <a href="#">Cooking Pot.</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-sm-6 col-md-3 item">
               <h5>Cooking Pot</h5>
               <ul>
                 <li>

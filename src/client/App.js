@@ -8,6 +8,8 @@ import { MealById } from "./components/MealByID";
 import { AddMeal } from "./components/AddMeal";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -31,6 +33,12 @@ function App() {
           </Route>
           <Route exact path="/addMeal">
             <AddMeal />
+          </Route>
+          <Route exact to path="/about">
+            <About />
+          </Route>
+          <Route exact to path="/contact">
+            <Contact />
           </Route>
           <Route exact path="/test-component">
             <TestComponent></TestComponent>

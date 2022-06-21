@@ -74,15 +74,26 @@
 }
 /*headerEnd*/
 
-/*homeStart*/
 .HomeDiv {
-  margin: 5px;
+  margin: 4px;
   padding-top: 30px;
-  padding-bottom: px;
+  padding-bottom: 370px;
   text-align: center;
 }
-/*homeStart*/
 
+.About{
+  margin: 4px;
+  padding-top: 30px;
+  padding-bottom: 370px;
+  text-align: center;
+}
+.Contact{
+  margin: 4px;
+  padding-top: 30px;
+  padding-bottom: 370px;
+  text-transform: uppercase;
+  text-align: center;
+}
 /*MealsListStart*/
 .containerMeals {
   display: flex;
@@ -152,14 +163,10 @@ input {
   padding: 5px;
   border: none;
   outline: none;
-  margin-left: 15px;
   margin-bottom: 3%;
   font-size: 15px;
 }
 
-.ButtonDiv {
-  text-align: center;
-}
 
 button {
   background-color: #ff4f5a;
@@ -169,7 +176,6 @@ button {
   padding: 5px;
   font-size: 17px;
   padding-bottom: 3%;
-  align-items: center;
 }
 
 /*AddMealEnd*/
