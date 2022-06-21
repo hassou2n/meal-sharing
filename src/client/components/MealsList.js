@@ -12,29 +12,18 @@ export default function MealsList() {
     ? "No meals"
     : meals.map((aMeal) => {
         return (
-          <div className="forList">
-            <div className="row1">
-              <div key={aMeal.idMeals}>
-                <h4>
-                  <Link to={`/meal/${aMeal.idMeals}`}>{aMeal.title}</Link>
-                </h4>
-                <p>{aMeal.description}</p>
-                <p>
-                  <FaMapPin /> {aMeal.location}
-                </p>
-                <p>
-                  {" "}
-                  <FaCoins /> {aMeal.price} DKK{" "}
-                </p>
-              </div>
-            </div>
-          </div>
+          <div className="recipeMealsContainer" key={aMeal.idMeals}>
+          <Link to={`/meal/${aMeal.idMeals}`}>{aMeal.title}</Link>
+          <span>{aMeal.description}</span>
+          <span><FaMapPin /> {aMeal.location}</span>
+          <span> <FaCoins /> {aMeal.price} DKK </span>
+        </div>
         );
       });
 
   return (
-    <div className=" container">
-      <ul className="row">{mealsToRender}</ul>
+    <div className="containerMeals">
+      <ul className="recipeMealsList">{mealsToRender}</ul>
     </div>
   );
 }

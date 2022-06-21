@@ -84,11 +84,51 @@
 /*homeStart*/
 
 /*MealsListStart*/
-.forList {
-  padding: 3%;
+.containerMeals {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 325px;
   text-align: center;
 }
 
+.containerMeals div a {
+  text-decoration: none;
+}
+
+.containerMeals div a:hover {
+  color: #2d3233;
+}
+
+.searchComponent {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.recipeMealsList {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  justify-content: space-evenly;
+}
+
+.recipeMealsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 300px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.recipeMealsContainer span {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 5px 0;
+}
 /*MealsListEnd*/
 
 /*AddMealStart*/
