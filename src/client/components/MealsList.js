@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import mealsContext from "./MealsContext";
 import { useMeals } from "./UseMeals";
 import "./Style.css";
+import { FaCoins, FaMapPin } from 'react-icons/fa';
 
 export default function MealsList() {
   const { isLoading, meals } = React.useContext(mealsContext);
@@ -14,8 +15,8 @@ export default function MealsList() {
           <li className="recipeMealsContainer" key={aMeal.idMeals}>
             <Link to={`/meal/${aMeal.idMeals}`}>{aMeal.title}</Link>
             <span>{aMeal.description}</span>
-            <span>{aMeal.location}</span>
-            <span>{aMeal.price} DKK </span>
+            <span><FaMapPin /> {aMeal.location}</span>
+            <span> <FaCoins /> {aMeal.price} DKK </span>
           </li>
         );
       });
