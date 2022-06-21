@@ -12,18 +12,18 @@ export default function MealsList() {
     ? "No meals"
     : meals.map((aMeal) => {
         return (
-          <li className="recipeMealsContainer" key={aMeal.idMeals}>
+          <div className="recipeMealsContainer" key={aMeal.idMeals}>
             <Link to={`/meal/${aMeal.idMeals}`}>{aMeal.title}</Link>
             <span>{aMeal.description}</span>
             <span><FaMapPin /> {aMeal.location}</span>
             <span> <FaCoins /> {aMeal.price} DKK </span>
-          </li>
+          </div>
         );
       });
 
   return (
     <div className="containerMeals">
-      <ul className="recipeMealsList">{mealsToRender}</ul>
+      <div className="recipeMealsList">{mealsToRender}</div>
     </div>
   );
 }

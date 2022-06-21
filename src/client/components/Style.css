@@ -91,11 +91,11 @@
   text-align: center;
 }
 
-.containerMeals ul a {
+.containerMeals div a {
   text-decoration: none;
 }
 
-.containerMeals ul a:hover {
+.containerMeals div a:hover {
   color: #2d3233;
 }
 
