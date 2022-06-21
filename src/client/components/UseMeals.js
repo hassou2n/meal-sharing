@@ -1,16 +1,15 @@
-import { useState, useEffect } from 'react';
-import { getMeals, getMeal } from './Api';
+import { useState, useEffect } from "react";
+import { getMeals, getMeal } from "./Api";
 
 export function useMeals() {
-  const {  isLoading, response } = useFetch(getMeals);
-  return { isLoading, meals: response }
+  const { isLoading, response } = useFetch(getMeals);
+  return { isLoading, meals: response };
 }
-
 
 export function useMeal(mealId) {
   const getMealApi = () => getMeal(mealId);
-  const {  isLoading, response } = useFetch(getMealApi);
-  return { isLoading, meal: response }
+  const { isLoading, response } = useFetch(getMealApi);
+  return { isLoading, meal: response };
 }
 
 function useFetch(fetchFunc) {
@@ -25,5 +24,5 @@ function useFetch(fetchFunc) {
     });
   }, []);
 
-  return { isLoading, response }
+  return { isLoading, response };
 }

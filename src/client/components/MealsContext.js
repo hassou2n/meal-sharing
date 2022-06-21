@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
 const mealsContext = React.createContext();
 
-export const MealsProvider = mealsContext.Provider
+export const MealsProvider = mealsContext.Provider;
 export default mealsContext;
