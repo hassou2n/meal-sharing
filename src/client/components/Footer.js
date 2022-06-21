@@ -37,7 +37,17 @@ export default function Footer() {
             </div>
             <div className="col-md-6 item text">
               <h5>Cooking Pot</h5>
-              <p>Cooking Pot.</p>
+              <ul>
+                <li>
+                  <a href="#">Cooking Pot.</a>
+                </li>
+                <li>
+                  <a href="#">Cooking Pot.</a>
+                </li>
+                <li>
+                  <a href="#">Cooking Pot.</a>
+                </li>
+              </ul>
             </div>
             <div className="col item social">
               <a href="#">

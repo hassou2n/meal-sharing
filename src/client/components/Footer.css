@@ -3,6 +3,7 @@
   color: #f0f9ff;
   background-color: #282d32;
   bottom: 100%;
+  text-align: center;
 }
 
 .footer-dark h5 {
@@ -37,19 +38,11 @@
   }
 }
 
-.footer-dark .item.text {
-  margin-bottom: 36px;
-}
 
 @media (max-width: 767px) {
   .footer-dark .item.text {
     margin-bottom: 0;
   }
-}
-
-.footer-dark .item.text p {
-  opacity: 0.6;
-  margin-bottom: 0;
 }
 
 .footer-dark .item.social {

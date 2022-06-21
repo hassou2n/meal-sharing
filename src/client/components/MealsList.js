@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import mealsContext from "./MealsContext";
 import { useMeals } from "./UseMeals";
 import "./Style.css";
-import { FaCoins, FaMapPin } from 'react-icons/fa';
+import { FaCoins, FaMapPin } from "react-icons/fa";
 
 export default function MealsList() {
   const { isLoading, meals } = React.useContext(mealsContext);
@@ -12,18 +12,29 @@ export default function MealsList() {
     ? "No meals"
     : meals.map((aMeal) => {
         return (
-          <div className="recipeMealsContainer" key={aMeal.idMeals}>
-            <Link to={`/meal/${aMeal.idMeals}`}>{aMeal.title}</Link>
-            <span>{aMeal.description}</span>
-            <span><FaMapPin /> {aMeal.location}</span>
-            <span> <FaCoins /> {aMeal.price} DKK </span>
+          <div className="forList">
+            <div className="row1">
+              <div key={aMeal.idMeals}>
+                <h4>
+                  <Link to={`/meal/${aMeal.idMeals}`}>{aMeal.title}</Link>
+                </h4>
+                <p>{aMeal.description}</p>
+                <p>
+                  <FaMapPin /> {aMeal.location}
+                </p>
+                <p>
+                  {" "}
+                  <FaCoins /> {aMeal.price} DKK{" "}
+                </p>
+              </div>
+            </div>
           </div>
         );
       });
 
   return (
-    <div className="containerMeals">
-      <div className="recipeMealsList">{mealsToRender}</div>
+    <div className=" container">
+      <ul className="row">{mealsToRender}</ul>
     </div>
   );
 }
