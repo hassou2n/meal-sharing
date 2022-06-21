@@ -87,7 +87,6 @@
 .containerMeals {
   display: flex;
   flex-direction: column;
-  padding-bottom: 325px;
   text-align: center;
 }
 
@@ -113,12 +112,13 @@
   flex-direction: row;
   padding: 30px;
   justify-content: space-evenly;
+  flex-flow: row wrap;
 }
 
 .recipeMealsContainer {
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
   width: 300px;
   font-size: 18px;
   font-weight: bold;
