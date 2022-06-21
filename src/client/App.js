@@ -1,4 +1,3 @@
-import { hot } from "react-hot-loader/root";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent/TestComponent";
@@ -43,4 +42,4 @@ function App() {
   );
 }
 
-export default hot(App);
+export default App;
