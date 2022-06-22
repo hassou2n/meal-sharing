@@ -38,6 +38,22 @@ router.get("/", async (request, response) => {
         limit
       );
       response.json(resultlLimit);
+      const resultForMaxPrice = await knex("meal").where("price", "=<",maxPrice);
+      response.json(resultForMaxPrice);
+
+    } else if (availableReservations) {
+
+    } else if (title) {
+      const resultForTitle = await knex("meal").whereLike("title","%");
+      response.json(resultForTitle);
+
+    } else if (createdAfter) {
+      const resultForCreatedAfter = await knex("meal").where("created_date","<",createdAfter);
+      response.json(resultForCreatedAfter);
+
+    } else if (limit) {
+      const resultlLimit = await knex("meal").where("max_reservations","=",limit);
+      response.json(resultlLimit);
     } else if (limitMaxPrice) {
       const rMaxPrice = await knex("meal").where("price", ">", maxPrice);
       const rLimit = await knex("meal").where("max_reservations", "=", limit);
@@ -108,5 +124,32 @@ router.delete("/:mealId", async (request, response) => {
     throw error;
   }
 });
+
+router.post("/", async (request, response) => {
+  const rMeal = request.body;
+  const addsaNewMeal = await knex("meal").insert(rMeal)
+  response.json(addsaNewMeal)
+});
+
+router.get("/:id", async (request, response) => {
+  const id = request.params.id
+  const returnsMealById = await knex("meal").where({ id: id });
+  response.json(returnsMealById);
+});
+
+router.put("/:id", async (request, response) => {
+  const id = request.params.id
+  const rId = request.body
+  const updatesTheMealById = await knex("meal").where({ id: id }).update(rId);
+  response.json(updatesTheMealById);
+});
+
+router.delete("/:id", async (request, response) => {
+  const id = request.params.id
+  const rId = request.body
+  const deletesTheMealById = await knex("meal").where({ id: id }).del(rId);
+  response.json(deletesTheMealById);
+});
+
 
 module.exports = router;
