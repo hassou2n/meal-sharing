@@ -1,19 +1,51 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent/TestComponent";
+import MealsList from "./components/MealsList";
+import { useMeals } from "./components/UseMeals";
+import { MealsProvider } from "./components/MealsContext";
+import { MealById } from "./components/MealByID";
+import { AddMeal } from "./components/AddMeal";
+import { Header } from "./components/Header";
+import { Home } from "./components/Home";
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
+  const { isLoading, meals } = useMeals();
+
+  const contextValue = { isLoading, meals };
+
   return (
     <Router>
-      <Route exact path="/">
-        <p>test</p>
-      </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
-      </Route>
-      <Route exact path="/test-component">
-        <TestComponent></TestComponent>
-      </Route>
+      <Header />
+      <MealsProvider value={contextValue}>
+        <Switch>
+          <Route exact to path="/">
+            <Home />
+          </Route>
+          <Route exact to path="/meals">
+            <MealsList />
+          </Route>
+          <Route exact path="/meal/:mealId">
+            <MealById />
+          </Route>
+          <Route exact path="/addMeal">
+            <AddMeal />
+          </Route>
+          <Route exact to path="/about">
+            <About />
+          </Route>
+          <Route exact to path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/test-component">
+            <TestComponent></TestComponent>
+          </Route>
+        </Switch>
+        <Footer />
+      </MealsProvider>
     </Router>
   );
 }
